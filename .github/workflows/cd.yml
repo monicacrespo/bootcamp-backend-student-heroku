@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-  IMAGE_NAME: registry.heroku.com/${{secrets.HEROKU_APP_NAME}}/web
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+  IMAGE_NAME: registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
 
 jobs:
   cd:
@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Login heroku container
+      - name: Login heroku app Docker registry
         run: heroku container:login
       - name: Build docker image
-        run: docker build -t ${{env.IMAGE_NAME}} .
+        run: docker build -t ${{ env.IMAGE_NAME }} .
       - name: Deploy docker image
-        run: docker push ${{env.IMAGE_NAME}}
+        run: docker push ${{ env.IMAGE_NAME }}
       - name: Release
-        run: heroku container:release web -a ${{secrets.HEROKU_APP_NAME}}
+        run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}
