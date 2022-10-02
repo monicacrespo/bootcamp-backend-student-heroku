@@ -1,5 +1,5 @@
 # Introduction
-This repository presents Continuous Delivery (CD) using GitHub Actions following the lesson provided by Bootcamp Backend Lemoncode for the [Module 5 - Cloud - Testing - Auto - Heroku - Deploy](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/05-cloud/02-deploy/08-auto-heroku-deploy).
+This repository presents Continuous Delivery (CD) using GitHub Actions following the lesson provided by Bootcamp Backend Lemoncode for the [Module 5 - Cloud - Auto - Deploy - Heroku](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/05-cloud/02-deploy/08-auto-heroku-deploy).
 
 # CD pipelines - GitHub CD Workflows
 GitHub Actions brings continuous integration and continuous deployment (CI/CD) directly to the GitHub flow with templates built by developers for developers. 
