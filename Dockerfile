@@ -25,10 +25,10 @@ RUN npm ci --only=production
 
 
 # Set the port that your container uses
-EXPOSE 3000
+EXPOSE 80
 
 # Set environment variables
-ENV PORT=3000
+ENV PORT=80
 ENV STATIC_FILES_PATH=./public
 ENV API_MOCK=true
 ENV AUTH_SECRET=MY_AUTH_SECRET
